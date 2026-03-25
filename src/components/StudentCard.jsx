@@ -24,12 +24,15 @@ const StudentCard = ({
     <div
       className={`bg-slate-900 text-white rounded-xl shadow-md p-4 border-2 ${getStatusColor()} transition hover:scale-105`}
     >
+  
       {/* Student Image */}
-      <div className="flex justify-center mb-3">
-        <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-xl">
-          👤
-        </div>
-      </div>
+<div className="flex justify-center mb-3">
+  <img
+    src="/assets/student.jpg"
+    alt="student"
+    className="w-16 h-16 rounded-full object-cover border-2 border-slate-600"
+  />
+</div>
 
       {/* Student Info */}
       <div className="text-center">
