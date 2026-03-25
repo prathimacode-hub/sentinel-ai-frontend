@@ -1,0 +1,313 @@
+/* ============================= */
+/* AI PROCTORING SYSTEM STYLES   */
+/* ============================= */
+
+/* Tailwind base layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #020617;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.card {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+.btn-success {
+  background: #16a34a;
+}
+
+.btn-success:hover {
+  background: #15803d;
+}
+
+/* ============================= */
+/* CCTV FEED */
+/* ============================= */
+
+.cctv-feed {
+  background: black;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* CAMERA FEED */
+/* ============================= */
+
+.camera-feed {
+  background: black;
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+}
+
+/* AI scanning effect */
+.camera-scan {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: red;
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* ============================= */
+/* AUDIO MONITOR */
+/* ============================= */
+
+.audio-bar {
+  height: 10px;
+  background: #22c55e;
+  border-radius: 10px;
+  animation: audioPulse 1s infinite;
+}
+
+@keyframes audioPulse {
+  0% {
+    width: 10%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+/* ============================= */
+/* ALERTS */
+/* ============================= */
+
+.alert {
+  background: #7f1d1d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.alert-warning {
+  background: #78350f;
+}
+
+.alert-info {
+  background: #1e3a8a;
+}
+
+/* ============================= */
+/* STUDENT CARD */
+/* ============================= */
+
+.student-card {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.student-card:hover {
+  transform: scale(1.05);
+}
+
+.student-flagged {
+  border: 2px solid red;
+}
+
+/* ============================= */
+/* EVIDENCE */
+/* ============================= */
+
+.evidence-item {
+  background: #0f172a;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* LOGS */
+/* ============================= */
+
+.log-item {
+  border-bottom: 1px solid #1e293b;
+  padding: 8px 0;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+  text-align: center;
+  color: #64748b;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* STATUS COLORS */
+/* ============================= */
+
+.status-green {
+  color: #22c55e;
+}
+
+.status-red {
+  color: #ef4444;
+}
+
+.status-yellow {
+  color: #eab308;
+}
+
+/* ============================= */
+/* MONITORING STATUS */
+/* ============================= */
+
+.monitoring-active {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.monitoring-stopped {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .grid-6 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
